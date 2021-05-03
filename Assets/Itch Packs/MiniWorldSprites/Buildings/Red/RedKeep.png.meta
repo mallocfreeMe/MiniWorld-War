@@ -1,7 +1,97 @@
 fileFormatVersion: 2
 guid: e04c20941bf4e4fcd8354f07a6e05986
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 800295434522806508
+    second: RedKeep_0
+  - first:
+      213: -965880048138934103
+    second: RedKeep_1
+  - first:
+      213: -9052306445898809284
+    second: RedKeep_2
+  - first:
+      213: 1954856145112067656
+    second: RedKeep_3
+  - first:
+      213: 4385593869870922054
+    second: RedKeep_4
+  - first:
+      213: -5473615943921574048
+    second: RedKeep_5
+  - first:
+      213: -6898457634960255638
+    second: RedKeep_6
+  - first:
+      213: -8316835076221873506
+    second: RedKeep_7
+  - first:
+      213: 5991519904010075091
+    second: RedKeep_8
+  - first:
+      213: 6410135031425655072
+    second: RedKeep_9
+  - first:
+      213: 4152626315718787576
+    second: RedKeep_10
+  - first:
+      213: -9104088649266571306
+    second: RedKeep_11
+  - first:
+      213: -7119764672429281979
+    second: RedKeep_12
+  - first:
+      213: -9073239154667088777
+    second: RedKeep_13
+  - first:
+      213: -2104219687932497669
+    second: RedKeep_14
+  - first:
+      213: -7589691020417170541
+    second: RedKeep_15
+  - first:
+      213: 4173542825214623861
+    second: RedKeep_16
+  - first:
+      213: 5674292394899674695
+    second: RedKeep_17
+  - first:
+      213: 248483038700485643
+    second: RedKeep_18
+  - first:
+      213: 9091537879643194943
+    second: RedKeep_19
+  - first:
+      213: -6046051448764216592
+    second: RedKeep_20
+  - first:
+      213: -6657801229212469561
+    second: RedKeep_21
+  - first:
+      213: -6288661350027828430
+    second: RedKeep_22
+  - first:
+      213: 2100002143746409476
+    second: RedKeep_23
+  - first:
+      213: 6846966503213681387
+    second: RedKeep_0
+  - first:
+      213: 3273408211234745579
+    second: RedKeep_1
+  - first:
+      213: 5626482624509812854
+    second: RedKeep_2
+  - first:
+      213: 265011244070129511
+    second: RedKeep_3
+  - first:
+      213: 7814964001981174365
+    second: RedKeep_4
+  - first:
+      213: 2832066185039925587
+    second: RedKeep_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +122,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -41,12 +131,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -65,7 +155,43 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -75,7 +201,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: RedKeep_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beacc0502cf450f50800000000000000
+      internalID: 6846966503213681387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedKeep_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a8aa03b6318892f0800000000000000
+      internalID: -965880048138934103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedKeep_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c300936af3fbf5280800000000000000
+      internalID: -9052306445898809284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedKeep_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ee4648e4b012b10800000000000000
+      internalID: 1954856145112067656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedKeep_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64979c68362ccdc30800000000000000
+      internalID: 4385593869870922054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedKeep_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06fd3a9ac4fc904b0800000000000000
+      internalID: -5473615943921574048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
