@@ -7,11 +7,18 @@ namespace Character
 {
     public class Player : MonoBehaviour
     {
-        public Transform selectionAreaTransform;
-
+        // camera movement 
         private Camera _camera;
+        private Vector3 _originDragPos;
+        private Vector3 _dragPosDifference;
+        private bool _isDragged;
+
+        // select units 
+        public Transform selectionAreaTransform;
         private Vector3 _startSelectionPos;
         private List<GameObject> _selectedUnits;
+
+        // control units 
         private bool _isSelected;
         private bool _isMoving;
         private Vector3 _targetPos;
@@ -25,9 +32,13 @@ namespace Character
 
         private void Update()
         {
-            ControlCamera();
             SelectUnits();
             MoveUnits();
+        }
+
+        private void LateUpdate()
+        {
+            ControlCamera();
         }
 
         private void ControlCamera()
@@ -41,6 +52,26 @@ namespace Character
             else if (Input.mouseScrollDelta.y > 0 && _camera.orthographicSize > 5)
             {
                 _camera.orthographicSize--;
+            }
+
+            // hold middle mouse button to drag the camera view
+            if (Input.GetMouseButton(2))
+            {
+                _dragPosDifference = Helper.GetMouseWorldPos(_camera) - transform.position;
+                if (!_isDragged)
+                {
+                    _isDragged = true;
+                    _originDragPos = Helper.GetMouseWorldPos(_camera);
+                }
+            }
+            else
+            {
+                _isDragged = false;
+            }
+
+            if (_isDragged)
+            {
+                transform.position = _originDragPos - _dragPosDifference;
             }
         }
 
@@ -134,7 +165,7 @@ namespace Character
                     {
                         rtsUnit.Move("front");
                     }
-                    
+
                     rtsUnit.transform.position =
                         Vector3.MoveTowards(rtsUnit.transform.position,
                             new Vector3(targetPosList[targetPosListIndex].x, targetPosList[targetPosListIndex].y,
