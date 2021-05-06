@@ -142,38 +142,25 @@ namespace Character
             if (_isMoving)
             {
                 List<Vector3> targetPosList =
-                    GetPosListAround(_targetPos, new float[] {1f, 2f, 3f}, new int[] {5, 10, 20});
+                    GetPosListAround(_targetPos, new[] {1f, 2f, 3f}, new[] {5, 10, 20});
 
                 var targetPosListIndex = 0;
 
                 foreach (var unit in _selectedUnits)
                 {
                     var rtsUnit = unit.GetComponent<RtsUnit>();
-                    if (_camera.ScreenToWorldPoint(Input.mousePosition).x < transform.position.x)
-                    {
-                        rtsUnit.Move("left");
-                    }
-                    else if (_camera.ScreenToWorldPoint(Input.mousePosition).x > transform.position.x)
-                    {
-                        rtsUnit.Move("right");
-                    }
-                    else if (_camera.ScreenToWorldPoint(Input.mousePosition).y < transform.position.y)
-                    {
-                        rtsUnit.Move("back");
-                    }
-                    else if (_camera.ScreenToWorldPoint(Input.mousePosition).y > transform.position.y)
-                    {
-                        rtsUnit.Move("front");
-                    }
+                    rtsUnit.Move(rtsUnit.transform.position, targetPosList[targetPosListIndex]);
+                    rtsUnit.ChangeDirection();
 
                     rtsUnit.transform.position =
                         Vector3.MoveTowards(rtsUnit.transform.position,
                             new Vector3(targetPosList[targetPosListIndex].x, targetPosList[targetPosListIndex].y,
-                                rtsUnit.transform.position.z), Time.deltaTime * 5);
+                                rtsUnit.transform.position.z), Time.deltaTime * 3);
 
                     targetPosListIndex = (targetPosListIndex + 1 % targetPosList.Count);
 
-                    if (rtsUnit.transform.position == _targetPos)
+                    if (CompareVector3(rtsUnit.transform.position, targetPosList[targetPosListIndex],
+                        _selectedUnits.Count))
                     {
                         _isMoving = false;
                         rtsUnit.Idle();
@@ -206,6 +193,30 @@ namespace Character
             }
 
             return posList;
+        }
+
+        private static bool CompareVector3(Vector3 a, Vector3 b, int count)
+        {
+            int dist;
+            if (count <= 5)
+            {
+                dist = 1;
+            }
+            else if (count <= 10)
+            {
+                dist = 2;
+            }
+            else
+            {
+                dist = 3;
+            }
+            
+            if ((int) b.x - (int) a.x == dist && (int)a.y - (int)b.y == 0)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
